@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "HANDOFF_TOKEN_THRESHOLD=150000 node ~/.claude/hooks/claude_handoff_hook.js"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ~/.claude/hooks/claude_handoff_hook.js"
+          }
+        ]
+      }
+    ]
+  }
+}

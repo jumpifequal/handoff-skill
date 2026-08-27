@@ -1,0 +1,16 @@
+{
+  "description": "Automatic handoff before Codex automatic context compaction.",
+  "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "^auto$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ~/.codex/hooks/codex_handoff_hook.js"
+          }
+        ]
+      }
+    ]
+  }
+}
