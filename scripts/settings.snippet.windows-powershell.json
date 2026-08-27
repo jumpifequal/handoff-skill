@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$env:HANDOFF_TOKEN_THRESHOLD=150000; node \"$env:USERPROFILE\\.claude\\hooks\\handoff_hook.js\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$env:USERPROFILE\\.claude\\hooks\\handoff_hook.js\""
+          }
+        ]
+      }
+    ]
+  }
+}
