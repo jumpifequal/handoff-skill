@@ -20,20 +20,20 @@ It is designed for the moment where a normal chat summary is not enough: long co
 Install directly from GitHub with the open `skills` CLI:
 
 ```bash
-npx skills add jumpifequal/handoff
+npx skills add jumpifequal/handoff-skill
 ```
 
 Inspect what the CLI detects before installing:
 
 ```bash
-npx skills add jumpifequal/handoff --list
+npx skills add jumpifequal/handoff-skill --list
 ```
 
 Install globally for a specific agent:
 
 ```bash
-npx skills add jumpifequal/handoff -g -a codex -y
-npx skills add jumpifequal/handoff -g -a claude-code -y
+npx skills add jumpifequal/handoff-skill -g -a codex -y
+npx skills add jumpifequal/handoff-skill -g -a claude-code -y
 ```
 
 > `npx skills add` installs the skill. Automatic lifecycle hooks are optional and require the additional setup described under [Automatic lifecycle hooks](#automatic-lifecycle-hooks).
